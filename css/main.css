@@ -1,0 +1,308 @@
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@400;600&family=Oswald:wght@200;300;500&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+:root {
+    --white: #EFF0F2;
+    --grey: #9DA1AD;
+    --primary-color: #2D0569;
+    --secondary-color: #572792;
+    --tertiary-color: #A76888;
+    --primary-font: 'Bodoni Moda', serif;
+    --secondary-font: 'Oswald', sans-serif;
+}
+
+body {
+    background-image: url(../img/body.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    min-height: 100vh;
+    font-family: var(--primary-font);
+    overflow: hidden;
+}
+
+img {
+    width: 100%;
+} 
+/* ================= GLOBALS ================= */
+.btn {
+    color: var(--grey);
+    padding: 10px;
+    background-color: var(--white);
+    border-radius: 30px;
+    border: none;
+    text-decoration: none;
+    font-weight: 600;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+    cursor: pointer;
+}
+.btn:hover {
+    background-color: var(--primary-color);
+    transition: all .3s ease-in;
+    color: var(--tertiary-color);
+}
+.show {
+    top: 0px;
+}
+
+/* ============================== STARTER TRIVIA PAGE ============================ */
+
+/* ======== HAEDER ======== */
+.header {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 90vh;
+    margin-top: 5rem;
+}
+.header .logo {
+    width: 250px;
+}
+.header .start-game {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    bottom: 3rem;
+}
+.header .start-game a {
+    width: 200px;
+    text-align: center;
+    margin-bottom: 1.4rem;
+}
+.header .start-game button {
+    background-color: rgba(0,0,0,.23);
+    outline: none;
+    width: 150px;
+    margin: 0 auto;
+}
+
+/* =========== MODAL ========== */
+.modal-form {
+    font-family: var(--secondary-font);
+    position: fixed;
+    top: -1000px;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(225, 225, 225, .93);
+    text-align: center;
+    padding-top: 6rem;
+    transition: top .4s ease-in;
+}
+.modal-form h4 {
+    font-size: 1.4rem;
+    color: var(--primary-color);
+    background-color: rgba(225, 225, 225, .93);
+    border: none;
+    border-radius: 10px;
+    width: 80%;
+    margin: 0 auto;
+    padding: 10px;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+}
+.modal-form form {
+    margin-top: 3rem;
+    position: relative;
+}
+.modal-form .card-body {
+    width: 80%;
+    margin: 0 auto;
+    padding: 30px 0;
+    background-color: rgba(225, 225, 225, .5);
+    border-radius: 15px;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+}
+.modal-form .card-body label {
+    color: var(--primary-color);
+}
+.modal-form .card-body select {
+    width: 100%;
+    padding: 10px 10px;
+    margin-top: 1rem;
+    background-color: rgba(225, 225, 225, .5);
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+    color: var(--grey);
+    font-size: 1rem;
+}
+.modal-form form button {
+    position: relative;
+    bottom: 1.1rem;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+}
+.close-modal {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    width: 44px;
+    height: 44px;
+}
+@media only screen and (min-width: 768px) {
+    .modal-form h4 {
+        width: 60%;
+    }
+    .modal-form .card-body{
+        width: 60%;
+    }
+}
+/* = MODAL RULES = */
+.modal-how {
+    font-family: var(--secondary-font);
+    position: fixed;
+    top: 0;
+    left: -3000px;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background-color: rgba(0,0,0,.4);
+    transition: left .5s ease-in-out;
+}
+.modal-how .rules {
+    position: relative;
+    background-color: var(--white);
+    padding: 20px;
+    border-radius: 15px;
+}
+.modal-how .rules h4 {
+    text-align: center;
+    margin-bottom: 1rem;
+    padding: 10px;
+    border-radius: 5px;
+    color: var(--primary-color);
+    box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+}
+.modal-how .rules ul li {
+    list-style-type: none;
+    margin-bottom: .7rem;
+    color: var(--grey);
+}
+.modal-how .rules ul li span {
+    color: var(--primary-color);
+}
+.modal-how .rules button {
+    position: absolute;
+    right: 1rem;
+    bottom: 1rem;
+}
+
+/* =============================== QUESTIONS HEADER ================= */
+.questions-header {
+    font-family: var(--secondary-font);
+    margin-top: 2rem;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    height: 90vh;
+}
+
+.questions-body {
+    background-color: rgba(225, 225, 225, .3);
+    width: 100%;
+    height: 100vh;
+    border-radius: 20px;
+    text-align: center;
+    padding: 20px 10px;
+    position: relative;
+    overflow: auto;
+}
+.questions-body h4 {
+    font-weight: 400;
+    font-size: 1.5rem;
+    color: var(--white);
+    margin-bottom: 4rem;
+}
+.questions-body .timer-container span {
+    font-size: 3rem;
+    padding: 20px;
+    color: var(--white);
+    background-color: rgba(225, 225, 225, .3);
+    border-radius: 50%;
+    border: 10px solid var(--tertiary-color);
+}
+
+.questions-body .questions-cards {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 6rem;
+}
+.questions-body .questions-cards .cards {
+    background-color: white;
+    margin: 10px;
+    padding: 20px;
+    box-shadow: 10px .5rem 1rem rgba(0,0,0,.15)!important;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    font-weight: 400;
+    font-family: var(--secondary-font);
+}
+.questions-body .questions-cards .cards:hover {
+    transform: scale(.96);
+    background-color: #ebebeb;
+    transition: transform .3s ease;
+}
+.questions-body .questions-cards .cards span {
+    color: var(--white);
+    display: inline-block;
+    background-color: rgb(231, 142, 25);
+    padding: 6px;
+    border-radius: 50%;
+    width: 30px;
+    height: 32px;
+    margin-bottom: 1rem;
+}
+.questions-body .questions-cards .b span {
+    background-color: rgb(37, 175, 230);
+}
+.questions-body .questions-cards .c span {
+    background-color: rgb(28, 116, 6);
+}
+.questions-body .questions-cards .d span {
+    background-color: rgb(185, 37, 230);
+}
+
+.questions-body .buttons-container {
+    position: fixed;
+    bottom: .5rem;
+    right: 1rem;
+}
+
+.next-question-alert {
+    padding: 10px;
+    color: var(--grey);
+    position: absolute;
+    top: 8rem;
+    left: -1000px;
+    background-color: var(--white);
+    border-radius: 0 10px 10px 0;
+    border: none;
+    box-shadow: 10px .5rem 1rem rgba(0,0,0,.15)!important;
+    transition: left .3s ease-in-out;
+}
+@media only screen and (min-width: 576px) {
+    .questions-body .questions-cards {
+        display: block;
+    }
+    .questions-body .buttons-container {
+        position: absolute;
+        bottom: 1rem;
+        right: 1rem;
+    }
+}
