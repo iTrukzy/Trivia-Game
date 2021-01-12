@@ -302,6 +302,17 @@ img {
     box-shadow: 10px .5rem 1rem rgba(0,0,0,.15)!important;
     transition: left .3s ease-in-out;
 }
+
+.type-diffi-alert {
+    position: absolute;
+    right: 0;
+    top: 8rem;
+    padding: 10px;
+    background-color: var(--white);
+    border-radius: 10px 0 0 10px;
+    color: var(--grey);
+    border: none;
+}
 @media only screen and (min-width: 576px) {
     .questions-body .questions-cards {
         display: block;

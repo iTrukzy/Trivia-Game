@@ -34,6 +34,10 @@ function printCategories(categories) {
     categories.forEach((category) => {
         categoryContainer.innerHTML += `<option value="${category.id}">${category.name}</option>`;
     });
+
+
+    
+
 }
 apiCategories();
 
@@ -60,6 +64,17 @@ function apiQuestions(){
     .catch((err) => {
         console.log(err)
     })
+
+    const typeDiffiAlert = document.getElementById('type-diffi-alert')
+    if (difficulty === 'easy') {
+        typeDiffiAlert.style.color = 'rgb(28, 116, 6)';
+    } else if (difficulty === 'mediun') {
+        typeDiffiAlert.style.color = 'rgb(231, 142, 25)';
+        typeDiffiAlert.innerText = 'Mediun'
+    } else if (difficulty === 'hard') {
+        typeDiffiAlert.style.color = 'red';
+        typeDiffiAlert.innerText = 'Hard'
+    }
    
 }
 let questions = []
