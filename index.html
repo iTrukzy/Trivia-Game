@@ -27,7 +27,7 @@
                 </div>
                 
                 <h4>Youe Need Select Question Choices</h4>
-                <form action="/questions.html" id="form">
+                <form action="/questions.html" id="form" onsubmit="event.preventDefault(), apiQuestions()">
                     <div class="row card-body">
                         <div class="card col-md-6">
                             <label for="number-Question">Select Number Question</label>
@@ -56,14 +56,14 @@
                         <div class="card col-md-6">
                             <label for="type-Question">Select Type</label>
                             <select id="type-Question">
-                                <option value="easy">Multiple Choice</option>
-                                <option value="mediun">True / False</option>
+                                <option value="multiple">Multiple Choice</option>
+                                <option value="boolean">True / False</option>
                             </select>
                         </div>
                         
 
                     </div>
-                    <button id="start-game" class="btn" type="submit" onclick="event.preventDefault(), getQuestions()">Start Game</button>
+                    <button id="start-game" class="btn" type="submit" >Start Game</button>
                 </form>
             </div>
 
@@ -87,33 +87,40 @@
 
         <div class="questions-header" id="questions-header">
             <div class="questions-body">
-                <div class="questions-container">
-                    <h4>Whats the fastest animal in the world?</h4>
+                <div class="questions-container" id="questions-container">
+                    <div id="question-item">
+                        
+                    </div>
+                    
                     <div class="timer-container">
                         <span id="timer"></span>
                     </div>
                     <div class="questions-cards">
                             <button class="cards col-s-5 a">
+                                <input type="radio">
                                 <span>A</span>
-                                <p>Answer 1</p>
+                                <p id="a_text"></p>
                             </button>
                             <button class="cards col-s-5 b">
+                                <input type="radio">
                                 <span>B</span>
-                                <p>Answer 2</p>
+                                <p id="b_text"></p>
                             </button>
                             <button class="cards col-s-5 c">
+                                <input type="radio">
                                 <span>C</span>
-                                <p>Answer 3</p>
+                                <p id="c_text"></p>
                             </button>
                             <button class="cards col-s-5 d">
+                                <input type="radio">
                                 <span>D</span>
-                                <p>Answer 4</p>
+                                <p id="d_text"></p>
                             </button>
                     </div>
                 </div>
                 <div class="buttons-container">
                     <button class="btn" id="cancel-questions" >Cancel</button>
-                    <button class="btn">Next Question</button>
+                    <button id="next-questions" class="btn">Next Question</button>
                 </div>
                 <div class="next-question-alert" id="next-question-alert">
                     <p>Time Out... 😢</p>

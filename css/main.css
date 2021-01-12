@@ -222,7 +222,7 @@ img {
     position: relative;
     overflow: auto;
 }
-.questions-body h4 {
+.questions-body #question-item {
     font-weight: 400;
     font-size: 1.5rem;
     color: var(--white);
@@ -243,6 +243,7 @@ img {
     margin-top: 6rem;
 }
 .questions-body .questions-cards .cards {
+    position: relative;
     background-color: white;
     margin: 10px;
     padding: 20px;
@@ -267,6 +268,11 @@ img {
     width: 30px;
     height: 32px;
     margin-bottom: 1rem;
+}
+.questions-body .questions-cards .cards input {
+    position: absolute;
+    left: 1rem;
+    top: 1rem;
 }
 .questions-body .questions-cards .b span {
     background-color: rgb(37, 175, 230);
