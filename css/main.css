@@ -253,6 +253,11 @@ img {
     outline: none;
     font-weight: 400;
     font-family: var(--secondary-font);
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
+    flex-direction: row-reverse;
+    
 }
 .questions-body .questions-cards .cards:hover {
     transform: scale(.96);
@@ -261,18 +266,28 @@ img {
 }
 .questions-body .questions-cards .cards span {
     color: var(--white);
-    display: inline-block;
     background-color: rgb(231, 142, 25);
     padding: 6px;
     border-radius: 50%;
     width: 30px;
     height: 32px;
     margin-bottom: 1rem;
+    position: absolute;
+    top: .4rem;
+    right: .4rem;
 }
 .questions-body .questions-cards .cards input {
     position: absolute;
     left: 1rem;
     top: 1rem;
+}
+.questions-body .questions-cards .cards label {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 55px;
+    cursor: pointer;
 }
 .questions-body .questions-cards .b span {
     background-color: rgb(37, 175, 230);

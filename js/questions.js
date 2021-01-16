@@ -80,6 +80,8 @@ function apiQuestions(){
 let questions = []
 let answers = []
 
+
+
 function printQuestions(loadedQiestions) {
     const questionsContainer = document.getElementById('questions-container');
 
@@ -87,6 +89,7 @@ function printQuestions(loadedQiestions) {
     for (let i = 0; i < loadedQiestions.results.length; i++) {
         const formattedQuestion = loadedQiestions.results[i].question
         const answerChoices = [...loadedQiestions.results[i].incorrect_answers]
+
     
 
         answerChoices.splice(Math.floor(Math.random() * 4) - 1 , 0, loadedQiestions.results[i].correct_answer)
@@ -97,15 +100,9 @@ function printQuestions(loadedQiestions) {
         questions.push(answerChoices)
         
     }
-    const questionItem =document.getElementById('question-item')
-    const a_text =document.getElementById('a_text')
-    const b_text =document.getElementById('b_text')
-    const c_text =document.getElementById('c_text')
-    const d_text =document.getElementById('d_text')
-
     for (let j = 0; j < questions.length; j++) {
+     
         questionItem.innerText = questions[0]
-        console.log(questions[j])
             a_text.innerText = questions[1][0]
             b_text.innerText = questions[1][1]
             c_text.innerText = questions[1][2]
@@ -114,17 +111,47 @@ function printQuestions(loadedQiestions) {
             
 
     }
-    // console.log(questions)
-    // console.log(answers)
-    // loadedQiestions.results.forEach(element => {
-        
-    // });((loadedQiestions) => {
 
-    // });
-        
-
-    
-    // questionItem.innerHTML = questionItems;
-    startTimer()
+    startTimer();
     
 }
+
+
+let answersAll = []
+let selectedAnswers = []
+
+let currentQuestion = 0;
+function nexQuestion() {
+    currentQuestion++
+
+    const rbs = document.querySelectorAll('input[name="answer"]');
+        
+        let selectedValue;
+        for (const rb of rbs) {
+            if (rb.checked) {
+                document.getElementById('a').setAttribute('value', a_text.innerText)
+                document.getElementById('b').setAttribute('value', b_text.innerText)
+                document.getElementById('c').setAttribute('value', c_text.innerText)
+                document.getElementById('d').setAttribute('value', d_text.innerText)
+                selectedValue = rb.value
+                selectedAnswers.push(selectedValue)
+              
+            }
+            
+        }
+        
+    
+        timeLeft = 15
+        questionItem.innerText = questions[currentQuestion++ + 1];      
+            a_text.innerText = questions[currentQuestion+ 1][0]
+            b_text.innerText = questions[currentQuestion+ 1][1]
+            c_text.innerText = questions[currentQuestion+ 1][2]
+            d_text.innerText = questions[currentQuestion+ 1][3]
+            
+            
+            console.log(selectedValue)
+            console.log(selectedAnswers)
+        
+}
+
+

@@ -9,6 +9,12 @@ const header = document.getElementById('header');
 const questionsHeader = document.getElementById('questions-header');
 const startGame = document.getElementById('start-game');
 const nextQuestionAlert = document.getElementById('next-question-alert');
+
+const questionItem =document.getElementById('question-item')
+const a_text =document.getElementById('a_text')
+const b_text =document.getElementById('b_text')
+const c_text =document.getElementById('c_text')
+const d_text =document.getElementById('d_text')
 const nextQuestions = document.getElementById('next-questions');
 
 

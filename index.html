@@ -88,8 +88,8 @@
         <div class="questions-header" id="questions-header">
             <div class="questions-body">
                 <div class="questions-container" id="questions-container">
-                    <div id="question-item">
-                        
+                    <div >
+                        <h4 id="question-item"></h4>
                     </div>
                     
                     <div class="timer-container">
@@ -97,30 +97,31 @@
                     </div>
                     <div class="questions-cards">
                             <button class="cards col-s-5 a">
-                                <input type="radio">
+                                <input type="radio" id="a" name="answer">
                                 <span>A</span>
-                                <p id="a_text"></p>
+                                <label id="a_text" for="a"></label>
                             </button>
                             <button class="cards col-s-5 b">
-                                <input type="radio">
+                                <input type="radio" id="b" name="answer">
                                 <span>B</span>
-                                <p id="b_text"></p>
+                                <label id="b_text" for="b"></label>
                             </button>
                             <button class="cards col-s-5 c">
-                                <input type="radio">
+                                <input type="radio" id="c" name="answer">
                                 <span>C</span>
-                                <p id="c_text"></p>
+                                <label id="c_text" for="c"></label>
                             </button>
                             <button class="cards col-s-5 d">
-                                <input type="radio">
+                                <input type="radio" id="d" name="answer">
                                 <span>D</span>
-                                <p id="d_text"></p>
+                                <label id="d_text" for="d"></label>
                             </button>
                     </div>
                 </div>
                 <div class="buttons-container">
                     <button class="btn" id="cancel-questions" >Cancel</button>
-                    <button id="next-questions" class="btn">Next Question</button>
+                    <button id="next-questions" class="btn" onclick="nexQuestion()" >Next Question</button>
+                    <!-- <button onClick="evaluation()">Finished</button> -->
                 </div>
                 <div class="next-question-alert" id="next-question-alert">
                     <p>Time Out... 😢</p>
