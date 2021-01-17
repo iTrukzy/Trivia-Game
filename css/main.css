@@ -328,6 +328,9 @@ img {
     color: var(--grey);
     border: none;
 }
+#finish-questions {
+    display: none;
+}
 @media only screen and (min-width: 576px) {
     .questions-body .questions-cards {
         display: block;
@@ -337,4 +340,33 @@ img {
         bottom: 1rem;
         right: 1rem;
     }
+}
+
+/* =================== RESULTS HEADER ======================== */
+.results-header {
+    font-family: var(--secondary-font);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(225, 225, 225, .93);
+    text-align: center;
+    padding: 50px 20px;
+    display: none;
+}
+.results-header h4 {
+    padding: 10px;
+    font-size: 1.4rem;
+    color: var(--primary-color);
+    box-shadow: 10px .5rem 1rem rgba(0,0,0,.15)!important;
+    margin-bottom: 4rem;
+}
+.results-container {
+    box-shadow: 10px .5rem 1rem rgba(0,0,0,.15)!important;
+    padding: 10px;
+    color: var(--grey);
+}
+.btn-finish {
+    margin-top: 2rem;
 }

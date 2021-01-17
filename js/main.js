@@ -16,6 +16,10 @@ const b_text =document.getElementById('b_text')
 const c_text =document.getElementById('c_text')
 const d_text =document.getElementById('d_text')
 const nextQuestions = document.getElementById('next-questions');
+const finishQuestions = document.getElementById('finish-questions');
+const resultsContainer = document.getElementById('results-container');
+const resultsHeader = document.getElementById('results-header');
+const resultsText = document.getElementById('results-text');
 
 
 

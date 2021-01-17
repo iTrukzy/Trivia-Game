@@ -121,6 +121,7 @@
                 <div class="buttons-container">
                     <button class="btn" id="cancel-questions" >Cancel</button>
                     <button id="next-questions" class="btn" onclick="nexQuestion()" >Next Question</button>
+                    <button id="finish-questions" class="btn" onclick="finishQuestion()" >Finish!</button>
                     <!-- <button onClick="evaluation()">Finished</button> -->
                 </div>
                 <div class="next-question-alert" id="next-question-alert">
@@ -133,6 +134,17 @@
             </div>
 
 
+        </div>
+
+
+        <div class="results-header" id="results-header">
+            <h4>Results Questions</h4>
+
+            <div class="results-container" id="results-container">
+                <p id="results-text"></p>
+            </div>
+
+            <button class="btn btn-finish">Finish</button>
         </div>
     </div>
     
@@ -152,6 +164,6 @@
 
 
     <script src="./js/main.js"></script>
-    <script src="./js/questions.js"></script>
+    <script charset="UTF-8" src="./js/questions.js"></script>
 </body>
 </html>
