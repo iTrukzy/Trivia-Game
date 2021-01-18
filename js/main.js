@@ -20,6 +20,9 @@ const finishQuestions = document.getElementById('finish-questions');
 const resultsContainer = document.getElementById('results-container');
 const resultsHeader = document.getElementById('results-header');
 const resultsText = document.getElementById('results-text');
+const correctImg = document.getElementById('correct-img');
+const incorrectImg = document.getElementById('incorrect-img');
+const btnFinish = document.getElementById('btn-finish');
 
 
 

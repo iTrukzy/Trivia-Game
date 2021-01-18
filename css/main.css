@@ -204,6 +204,7 @@ img {
 
 /* =============================== QUESTIONS HEADER ================= */
 .questions-header {
+    position: relative;
     font-family: var(--secondary-font);
     margin-top: 2rem;
     display: none;
@@ -369,4 +370,48 @@ img {
 }
 .btn-finish {
     margin-top: 2rem;
+}
+@media only screen and (min-width: 900px) {
+    .results-header h4{
+        width: 60%;
+        margin: 0 auto;
+    }
+    .results-container {
+        width: 60%;
+        margin: 40px auto;
+
+    }
+}
+
+/* ================= CORRECTS & INCORRECTS ================= */
+
+.correct-img {
+    background-color: rgba(225, 225, 225, .97);
+    position: absolute;
+    top: -1000px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: top .3s ease-in-out;
+}
+.correct-img img {
+    width: 300px;
+}
+.incorrect-img {
+    background-color: rgba(225, 225, 225, .97);
+    position: absolute;
+    top: -1000px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: top .3s ease-in-out;
+}
+.incorrect-img img {
+    width: 250px;
 }
